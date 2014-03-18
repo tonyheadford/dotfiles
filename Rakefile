@@ -7,6 +7,7 @@ task :install do
     link_file(file)
   end
   install_vundle
+  install_gitignore
 end
 
 def link_file(file)
@@ -18,5 +19,10 @@ def install_vundle
   puts "installing vundle"
   system %Q{git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle}
   system %Q{vim +BundleInstall +qall}
+end
+
+def install_gitignore
+  puts "adding global gitignore"
+  system %Q{git config --global core.excludesfile $HOME/.gitignore_global}
 end
 

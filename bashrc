@@ -2,6 +2,18 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/local/pgsql/b
 export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 export CLICOLOR=1
 
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
 export ORACLE=$HOME/oracle/instantclient_11_2
 export PATH=$ORACLE:$PATH
 export DYLD_LIBRARY_PATH=$ORACLE:$DYLD_LIBRARY_PATH

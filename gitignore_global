@@ -43,3 +43,8 @@ Thumbs.db
 .hg
 .rvmrc
 
+# POW #
+#######
+.powrc
+.powenv
+

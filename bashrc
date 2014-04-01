@@ -28,7 +28,12 @@ fi
 
 export ORACLE=$HOME/oracle/instantclient
 export PATH=$ORACLE:$PATH
-export DYLD_LIBRARY_PATH=$ORACLE:$DYLD_LIBRARY_PATH
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export DYLD_LIBRARY_PATH=$ORACLE:$DYLD_LIBRARY_PATH
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+  export LD_LIBRARY_PATH=$ORACLE:$LD_LIBRARY_PATH
+fi
 export TNS_ADMIN=$ORACLE
 export SQLPATH=$ORACLE
 

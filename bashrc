@@ -1,3 +1,4 @@
+export TERM=xterm-256color
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/local/pgsql/bin:$PATH
 export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 export CLICOLOR=1

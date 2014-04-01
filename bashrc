@@ -25,7 +25,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-export ORACLE=$HOME/oracle/instantclient_11_2
+export ORACLE=$HOME/oracle/instantclient
 export PATH=$ORACLE:$PATH
 export DYLD_LIBRARY_PATH=$ORACLE:$DYLD_LIBRARY_PATH
 export TNS_ADMIN=$ORACLE

@@ -19,6 +19,10 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/TailMinusF.git'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/nerdtree'
+
+map <C-n> :NERDTreeToggle<CR>
 
 filetype plugin indent on     " required
 "
@@ -56,4 +60,25 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+hi StatusLine                guifg=#E6E1DC guibg=#414243 gui=NONE ctermfg=0 ctermbg=220 cterm=NONE
+hi StatusLineNC              guibg=#303030 gui=NONE ctermbg=241 cterm=NONE
+
+if executable('ag')
+  " use ag instead of grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " use ag in CtrlP for listing files - respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " ag is fast so no need to cache
+  let g:ctrlp_use_caching = 0
+
+  " bind \ (backward slash) to grep shortcut
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+  nnoremap \ :Ag<SPACE>
+endif
+
+" bind K to search text under cursor in a quick fix window
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 

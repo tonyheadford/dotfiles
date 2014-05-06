@@ -67,7 +67,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source ~/.git-completion.bash
 export PS1='[\W\[\e[36m\]$(__git_ps1 "(%s) ")\[\e[0m\]]\$ '
 
-export PATH=~/.rvm/bin:$PATH # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+#export PATH=~/.rvm/bin:$PATH # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+#cd .. && cd - # ensure rvmrc is run when restoring shells at startup
 
-cd .. && cd - # ensure rvmrc is run when restoring shells at startup
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+

@@ -42,6 +42,7 @@ Thumbs.db
 .svn/*
 .hg
 .rvmrc
+.ruby-version
 
 # POW #
 #######
@@ -55,4 +56,8 @@ brakeman.html
 # ctags #
 #########
 tags
+
+# Bundler cache #
+#################
+vendor/bundle/*
 

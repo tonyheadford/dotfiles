@@ -29,10 +29,11 @@ fi
 export ORACLE=$HOME/oracle/instantclient
 export PATH=$ORACLE:$PATH
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$OSTYPE" =~ ^darwin ]]; then
   export DYLD_LIBRARY_PATH=$ORACLE:$DYLD_LIBRARY_PATH
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+elif [[ "$OSTYPE" =~ ^linux ]]; then
   export LD_LIBRARY_PATH=$ORACLE:$LD_LIBRARY_PATH
+  alias sqlplus="rlwrap sqlplus"
 fi
 export TNS_ADMIN=$ORACLE
 export SQLPATH=$ORACLE

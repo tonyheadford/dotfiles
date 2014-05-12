@@ -16,6 +16,7 @@ Bundle 'gmarik/vundle'
 " scripts on GitHub repos
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/TailMinusF.git'

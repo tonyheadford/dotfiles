@@ -16,12 +16,16 @@ Bundle 'gmarik/vundle'
 " scripts on GitHub repos
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-rake.git'
+Bundle 'tpope/vim-projectionist.git'
+Bundle 'tpope/vim-surround.git'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/TailMinusF.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/dbext.vim'
 
 map <C-n> :NERDTreeToggle<CR>
 

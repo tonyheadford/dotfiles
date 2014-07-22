@@ -1,4 +1,4 @@
-alias migrate="rake db:migrate db:test:prepare"
+alias migrate="bundle exec rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
 alias svnprecommit="git svn rebase && rake features && rake test"
@@ -24,6 +24,8 @@ alias hdeploy="git push staging master && heroku rake db:migrate --app \${\$(pwd
 alias hconsole="heroku console --app \${\$(pwd):t}-staging"
 alias b="bundle"
 alias be="bundle exec"
+alias rc="bundle exec rails console"
+alias rs="bundle exec rails server"
 alias tmux="tmux -2"
-alias git_wcc='git config --global http.proxy http://172.22.4.8:8080'
+alias git_wcc="git config --global http.proxy http://172.22.4.8:8080"
 alias git_home="git config --global --unset http.proxy"

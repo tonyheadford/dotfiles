@@ -86,3 +86,16 @@ endif
 " bind K to search text under cursor in a quick fix window
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+" Alt+movement to navigate window panes
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
+
+" Maximise vertically and make panes the same size
+nmap <silent> <A-Up> :wincmd _<CR>
+nmap <silent> <A-Down> :wincmd =<CR>
+
+" set minimum window height to zero
+set wmh=0
+

@@ -42,7 +42,6 @@ Thumbs.db
 .svn/*
 .hg
 .rvmrc
-.ruby-version
 
 # POW #
 #######
@@ -60,4 +59,8 @@ tags
 # Bundler cache #
 #################
 vendor/bundle/*
+
+# Figaro application configs #
+##############################
+config/application.yml
 

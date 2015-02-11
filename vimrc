@@ -19,12 +19,20 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-rake.git'
 Bundle 'tpope/vim-projectionist.git'
 Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-markdown'
+Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/TailMinusF.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/dbext.vim'
+
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -55,6 +63,11 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 autocmd FileType ruby set sw=2 sts=2 et
+
+augroup markdown
+  au!
+  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
 
 " Show highlighting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -98,4 +111,7 @@ nmap <silent> <A-Down> :wincmd =<CR>
 
 " set minimum window height to zero
 set wmh=0
+
+" disable folding in markdown
+let g:vim_markdown_folding_disabled=1
 

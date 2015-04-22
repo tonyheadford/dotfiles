@@ -1,5 +1,6 @@
 alias migrate="bundle exec rake db:migrate"
 alias rollback="bundle exec rake db:rollback"
+alias routes="bundle exec rake routes"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
 alias svnprecommit="git svn rebase && rake features && rake test"

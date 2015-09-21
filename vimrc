@@ -15,26 +15,30 @@ Bundle 'gmarik/vundle'
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-bundler.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-rake.git'
 Bundle 'tpope/vim-projectionist.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-vinegar'
+Bundle 'kien/ctrlp.vim.git'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
-Bundle 'vim-scripts/TailMinusF.git'
+" Bundle 'MarcWeber/vim-addon-mw-utils'
+" Bundle 'tomtom/tlib_vim'
+" Bundle 'garbas/vim-snipmate'
+" Bundle 'honza/vim-snippets'
+" Bundle 'vim-scripts/TailMinusF.git'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/dbext.vim'
+" Bundle 'scrooloose/nerdtree'
+" Bundle 'vim-scripts/dbext.vim'
+" Bundle 'camelcasemotion'
 
 "Plugin 'godlygeek/tabular'
 "Plugin 'plasticboy/vim-markdown'
 
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
 
 filetype plugin indent on     " required
 "
@@ -70,7 +74,7 @@ augroup markdown
 augroup END
 
 " Show highlighting groups for current word
-nmap <C-S-P> :call <SID>SynStack()<CR>
+" nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
@@ -109,9 +113,20 @@ nmap <silent> <C-Right> :wincmd l<CR>
 nmap <silent> <A-Up> :wincmd _<CR>
 nmap <silent> <A-Down> :wincmd =<CR>
 
+" map buffer list to F3
+nnoremap <F3> :ls<CR>
+" map buffer selection list to F2
+nnoremap <F2> :buffers<CR>:buffer<Space>
+
+nnoremap <C-X> :Explore<CR>
+
 " set minimum window height to zero
 set wmh=0
 
 " disable folding in markdown
 let g:vim_markdown_folding_disabled=1
+
+" ignore files and directories
+set wildignore+=*/tmp/**
+set wildignore+=*/vendor/**
 

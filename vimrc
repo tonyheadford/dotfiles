@@ -2,46 +2,42 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" alternatively, pass a path where Vundle should install bundles
-"let path = '~/some/path/here'
-"call vundle#rc(path)
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-bundler.git'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-rake.git'
-Bundle 'tpope/vim-projectionist.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-vinegar'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'tomtom/tcomment_vim'
-" Bundle 'MarcWeber/vim-addon-mw-utils'
-" Bundle 'tomtom/tlib_vim'
-" Bundle 'garbas/vim-snipmate'
-" Bundle 'honza/vim-snippets'
-" Bundle 'vim-scripts/TailMinusF.git'
-Bundle 'kchmck/vim-coffee-script'
-" Bundle 'scrooloose/nerdtree'
-" Bundle 'vim-scripts/dbext.vim'
-" Bundle 'camelcasemotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-bundler.git'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-rake.git'
+Plugin 'tpope/vim-projectionist.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-vinegar'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'jtratner/vim-flavored-markdown'
+Plugin 'tomtom/tcomment_vim'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'honza/vim-snippets'
+" Plugin 'vim-scripts/TailMinusF.git'
+Plugin 'kchmck/vim-coffee-script'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'vim-scripts/dbext.vim'
+" Plugin 'camelcasemotion'
 
 "Plugin 'godlygeek/tabular'
 "Plugin 'plasticboy/vim-markdown'
 
-" map <C-n> :NERDTreeToggle<CR>
-
+call vundle#end()             " required
 filetype plugin indent on     " required
-"
+
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install (update) bundles
@@ -73,6 +69,7 @@ augroup markdown
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
+" map <C-n> :NERDTreeToggle<CR>
 " Show highlighting groups for current word
 " nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()

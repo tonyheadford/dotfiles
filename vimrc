@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-bundler.git'
 Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-rake.git'
@@ -117,6 +118,9 @@ nnoremap <F2> :buffers<CR>:buffer<Space>
 
 nnoremap <C-X> :Explore<CR>
 
+" map end of line to not include carriage-return
+nmap $ g_
+
 " set minimum window height to zero
 set wmh=0
 
@@ -127,3 +131,6 @@ let g:vim_markdown_folding_disabled=1
 set wildignore+=*/tmp/**
 set wildignore+=*/vendor/**
 
+" fat fingers helpers
+:command W w
+:command Q q

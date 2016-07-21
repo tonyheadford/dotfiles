@@ -75,3 +75,6 @@ export PS1='[\W\[\e[36m\]$(__git_ps1 "(%s) ")\[\e[0m\]]\$ '
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
+
+# added by travis gem
+[ -f /Users/tony/.travis/travis.sh ] && source /Users/tony/.travis/travis.sh

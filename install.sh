@@ -16,7 +16,7 @@ done
 
 # install vundle
 echo "installing vundle"
-git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +BundleInstall +qall
 
 # install gitignore

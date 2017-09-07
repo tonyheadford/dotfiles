@@ -30,7 +30,7 @@ PLUGINS=( "tpope/vim-bundler" \
 
 for p in "${PLUGINS[@]}"
 do
-  git clone https://github.com/${p}.git $HOME/.vim/bundle/$(basename ${p})
+  git clone https://github.com/${p}.git $HOME/.vim/bundle/$(basename "${p}")
 done
 
 # install gitignore

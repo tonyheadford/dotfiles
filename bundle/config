@@ -6,3 +6,4 @@ BUNDLE_GEM__TEST: minitest
 BUNDLE_LOCAL__PAFS_CORE: "/Users/tony/projects/pafs_core"
 BUNDLE_DISABLE_LOCAL_BRANCH_CHECK: 'true'
 BUNDLE_LOCAL__GOVUK_ELEMENTS_FORM_BUILDER: "/Users/tony/projects/govuk_elements_form_builder"
+BUNDLE_LOCAL__DIBBLE: "/Users/tony/projects/dibble"

@@ -66,6 +66,6 @@ vendor/bundle/*
 
 # Figaro application configs #
 ##############################
-config/application.yml
-config/secrets.yml
+# config/application.yml
+# config/secrets.yml
 

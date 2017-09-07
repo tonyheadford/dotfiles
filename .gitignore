@@ -2,6 +2,8 @@
 .DS_Store
 *.swp
 
+bundle/cache
+
 vim/bundle/*
 
 vim/plugin/*

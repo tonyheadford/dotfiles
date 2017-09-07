@@ -1,42 +1,35 @@
+execute pathogen#infect()
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-bundler.git'
-Plugin 'tpope/vim-rails.git'
-Plugin 'tpope/vim-rake.git'
-Plugin 'tpope/vim-projectionist.git'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-vinegar'
-Plugin 'kien/ctrlp.vim.git'
-Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'tomtom/tcomment_vim'
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
-" Plugin 'honza/vim-snippets'
-" Plugin 'vim-scripts/TailMinusF.git'
-Plugin 'kchmck/vim-coffee-script'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'vim-scripts/dbext.vim'
-" Plugin 'camelcasemotion'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-bundler.git'
+" Plugin 'tpope/vim-rails.git'
+" Plugin 'tpope/vim-rake.git'
+" Plugin 'tpope/vim-projectionist.git'
+" Plugin 'tpope/vim-surround.git'
+" Plugin 'tpope/vim-markdown'
+" Plugin 'tpope/vim-vinegar'
+" Plugin 'kien/ctrlp.vim.git'
+" Plugin 'jtratner/vim-flavored-markdown'
+" Plugin 'tomtom/tcomment_vim'
+" Plugin 'kchmck/vim-coffee-script'
 
-"Plugin 'godlygeek/tabular'
-"Plugin 'plasticboy/vim-markdown'
+" call vundle#end()             " required
 
-call vundle#end()             " required
+syntax on
 filetype plugin indent on     " required
 
 " Brief help
@@ -50,7 +43,6 @@ filetype plugin indent on     " required
 
 colorscheme railscasts
 set backspace=2
-syntax on
 filetype indent on
 set autoindent			" always set autoindenting on
 set number
@@ -120,6 +112,8 @@ nnoremap <C-X> :Explore<CR>
 
 " map end of line to not include carriage-return
 nmap $ g_
+
+set clipboard=unnamed
 
 " set minimum window height to zero
 set wmh=0

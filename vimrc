@@ -80,7 +80,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " use ag in CtrlP for listing files - respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
   " ag is fast so no need to cache
   let g:ctrlp_use_caching = 0
 
@@ -94,10 +94,10 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Alt+movement to navigate window panes
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
+nmap <silent> <C-K> :wincmd k<CR>
+nmap <silent> <C-J> :wincmd j<CR>
+nmap <silent> <C-H> :wincmd h<CR>
+nmap <silent> <C-L> :wincmd l<CR>
 
 " Maximise vertically and make panes the same size
 nmap <silent> <A-Up> :wincmd _<CR>
@@ -128,3 +128,14 @@ set wildignore+=*/vendor/**
 " fat fingers helpers
 :command W w
 :command Q q
+
+" enable jsx in .js files
+let g:jsx_ext_required=0
+
+" standard for linting js
+let g:ale_linters = {
+      \ 'javascript': ['standard'],
+      \}
+" only run linters that have been specified
+let g:ale_linters_explicit = 1
+

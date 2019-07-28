@@ -2,6 +2,7 @@ export TERM=xterm-256color
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/local/pgsql/bin:$PATH
 export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
 export CLICOLOR=1
+export CHEATCOLORS=true
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
@@ -78,3 +79,10 @@ eval "$(rbenv init -)"
 
 # added by travis gem
 [ -f /Users/tony/.travis/travis.sh ] && source /Users/tony/.travis/travis.sh
+
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+

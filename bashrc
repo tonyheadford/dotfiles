@@ -66,7 +66,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # load the bash completion for git and change the prompt
 source ~/.git-completion.bash
-export PS1='[\W\[\e[36m\]$(__git_ps1 "(%s) ")\[\e[0m\]]\$ '
+export PS1='[\W\[\e[36m\]$(__git_ps1 "(%s)")\[\e[0m\]]\$ '
+# export PS1='[\W\[\e[36m\]$(__git_ps1 "(%s) ")\[\e[0m\]]\$'
 
 #export PATH=~/.rvm/bin:$PATH # Add RVM to PATH for scripting
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.

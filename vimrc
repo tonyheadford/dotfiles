@@ -77,7 +77,7 @@ hi StatusLineNC              guibg=#303030 gui=NONE ctermbg=241 cterm=NONE
 
 if executable('ag')
   " use ag instead of grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --nogroup\ --nocolor\ --ignore\ 'vendor/bundle'
 
   " use ag in CtrlP for listing files - respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'

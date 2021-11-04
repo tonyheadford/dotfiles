@@ -139,3 +139,11 @@ let g:ale_linters = {
 " only run linters that have been specified
 let g:ale_linters_explicit = 1
 
+" hide dot files by default (gh to toggle)
+"' let ghregex='\(^\|\s\s)\zs\.\S\+'
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+" vim-rspec
+let g:rspec_command = "!bundle exec rspec {spec}"
+map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>

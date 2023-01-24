@@ -6,7 +6,7 @@ if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
 end
 
 # Autocomplete
-require 'irb/completion'
+# require 'irb/completion'
 
 # Prompt behavior
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
@@ -15,6 +15,7 @@ ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 500
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
+IRB.conf[:USE_AUTOCOMPLETE] = false
 
 # # Easily print methods local to an object's class
 # class Object

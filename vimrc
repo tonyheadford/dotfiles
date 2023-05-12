@@ -21,7 +21,7 @@ set softtabstop=2
 set expandtab
 "
 " fzf integration
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 
 autocmd FileType ruby set sw=2 sts=2 et
 

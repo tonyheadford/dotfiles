@@ -31,7 +31,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-source ~/.docker_vars_for_deploy
+test -e "${HOME}/.docker_vars_for_deploy" && source "${HOME}/.docker_vars_for_deploy"
 
 export PATH="/Applications/love.app/Contents/MacOS":$PATH
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin":$PATH

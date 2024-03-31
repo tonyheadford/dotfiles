@@ -2,8 +2,6 @@
 .DS_Store
 *.swp
 
-bundle/cache
+home/.bundle/cache
 
-vim/bundle/*
-
-vim/plugin/*
+home/.vim/pack/*
